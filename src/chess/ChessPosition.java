@@ -17,11 +17,13 @@ public class ChessPosition {
         this.column=column;
     }
 
+    //transform a chess position in a default position
     protected Position toPosition(){
 
         return new Position(8 - row, column - 'a');
     }
 
+    //transform a default position in a chess position
     protected static ChessPosition fromPosition(Position position){
 
         return new ChessPosition((char)('a' - position.getColumn()),8 - position.getRow());

@@ -19,13 +19,20 @@ public class Position {
         return row;
     }
 
+    public void setRow(int row) {
+        this.row = row;
+    }
+
     public void setColumn(int column) {
         this.column = column;
     }
 
-    public void setRow(int row) {
-        this.row = row;
+    public void setValues(int row, int column){
+
+        this.row=row;
+        this.column=column;
     }
+
 
     @Override
     public String toString(){

@@ -40,6 +40,7 @@ public class ChessMatch {
         Position target = targetPosition.toPosition();
 
         validSourcePosition(source);
+        validTargetPosition(source,target);
         Piece capturedPiece = makeMove(source,target);
 
         return (ChessPiece) capturedPiece;
@@ -63,6 +64,14 @@ public class ChessMatch {
         if(!board.piece(position).isThrereAnyPossibleMove()){
 
             throw new ChessExeption("There is no possible movos for the chosen piece");
+        }
+    }
+
+    private void validTargetPosition(Position sourcePosition,Position targetPosition){
+
+        if(!board.piece(sourcePosition).possibleMove(targetPosition)){
+
+            throw new ChessExeption("The chosen piece can't move to target position");
         }
     }
 

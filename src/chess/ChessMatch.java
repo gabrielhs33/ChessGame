@@ -71,7 +71,7 @@ public class ChessMatch {
         }
         if(!board.piece(position).isThrereAnyPossibleMove()){
 
-            throw new ChessExeption("There is no possible movos for the chosen piece");
+            throw new ChessExeption("There is no possible moves for the chosen piece");
         }
     }
 

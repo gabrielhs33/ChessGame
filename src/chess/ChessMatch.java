@@ -9,17 +9,26 @@ import boardgame.Position;
 import chess.pieces.King;
 import chess.pieces.Rook;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChessMatch {
 
     private final Board board;
     private int turn;
     private  Color currentPlayer;
 
+    private final List<Piece> piecesOnTheBoard;
+    private final List<Piece> capturedPieces;
+
     public ChessMatch(){
 
         board = new Board(8,8);
         turn = 1;
         currentPlayer = Color.WHITE;
+        piecesOnTheBoard = new ArrayList<>();
+        capturedPieces = new ArrayList<>();
+
         initialSetup();
     }
 
@@ -74,6 +83,12 @@ public class ChessMatch {
         Piece capturedPiece = board.removePiece(targetPositon);
         board.placePiece(p,targetPositon);
 
+        if(capturedPiece != null){
+
+            piecesOnTheBoard.remove(capturedPiece);
+            capturedPieces.add(capturedPiece);
+        }
+
         return  capturedPiece;
     }
 
@@ -112,6 +127,7 @@ public class ChessMatch {
     private void placeNewPiece(char column, int row, ChessPiece piece){
 
         board.placePiece(piece,new ChessPosition(column,row).toPosition());
+        piecesOnTheBoard.add(piece);
     }
 
     //method responsible for starting the game by placing the pieces on the board

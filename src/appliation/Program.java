@@ -41,9 +41,9 @@ public class Program {
                     captured.add(capturedPiece);
 
             }catch (ChessExeption | InputMismatchException e) {
+
                 System.out.println(e.getMessage());
                 sc.nextLine();
-
             }
         }
     }

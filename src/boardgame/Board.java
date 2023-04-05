@@ -5,7 +5,7 @@ public class Board {
     private final int rows;
     private final int columns;
 
-    private Piece[][] pieces;
+    private final Piece[][] pieces;
 
     public Board( int rows, int columns){
 

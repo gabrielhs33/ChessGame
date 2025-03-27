@@ -88,10 +88,6 @@ Source: e2
 Target: e4
 </pre>
 
-<h2>📜 Licença</h2>
-<p>Este projeto está sob a licença MIT - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
-
-<hr>
 
 <p align="center">
   Desenvolvido por <a href="https://github.com/gabrielhs33">Gabriel Henrique</a> como projeto acadêmico

@@ -6,8 +6,6 @@
   <img src="https://img.shields.io/github/last-commit/gabrielhs33/ChessGame" alt="Last Commit">
 </p>
 
-<p align="center">Projeto de xadrez desenvolvido em Java como conclusão da disciplina de Programação 2, implementando todas as regras clássicas do jogo com interface no terminal.</p>
-
 <h2>🏗️ Estrutura do Projeto</h2>
 
 <pre>
